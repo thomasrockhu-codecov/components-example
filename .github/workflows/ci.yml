@@ -36,3 +36,14 @@ jobs:
         with:
           move_coverage_to_trash: true
           flags: smiles
+
+      - name: Run mutation testing
+        run: mutmut run
+
+      - name: Show mutation testing results
+        if: always()
+        run: mutmut results
+
+      - name: Show xml results
+        if: always()
+        run: mutmut junitxml
