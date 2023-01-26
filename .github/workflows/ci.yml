@@ -38,6 +38,7 @@ jobs:
           flags: smiles
 
       - name: Run mutation testing
-        run: |
-          mutmut run
-          mutmut results
+        run: mutmut run
+
+      - name: Show mutation testing results
+        run: mutmut results
