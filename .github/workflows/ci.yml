@@ -36,3 +36,8 @@ jobs:
         with:
           move_coverage_to_trash: true
           flags: smiles
+
+      - name: Run mutation testing
+        run: |
+          mutmut run
+          mutmut results
